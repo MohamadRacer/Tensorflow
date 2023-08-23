@@ -6,12 +6,7 @@ import requests
 import matplolib.pyplot as plt
 
 def plot_decision_boundary(model, X, y):
-  """
-  Plots the decision boundary created by a model predicting on X.
-  This function was inspired by two resources:
-   1. https://cs231n.github.io/neural-networks-case-study/
-   2. https://github.com/madewithml/basics/blob/master/notebooks/09_Multilayer_Perceptrons/09_TF_Multilayer_Perceptrons.ipynb 
-  """
+  
   # Define the axis boundaries of the plot and create a meshgrid
   x_min, x_max = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
   y_min, y_max = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
