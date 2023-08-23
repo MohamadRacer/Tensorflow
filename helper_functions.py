@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy
 import pandas as pd 
 import requests
-import matplolib.pyplot as plt
+import matplotlib.pyplot as plt
 
 def plot_decision_boundary(model, X, y):
   
