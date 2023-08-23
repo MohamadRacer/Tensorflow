@@ -1,3 +1,10 @@
+# Imports 
+import tensorflow as tf 
+import numpy as np
+import pandas as pd 
+import requests
+import matplolib.pyplot as plt
+
 def plot_decision_boundary(model, X, y):
   """
   Plots the decision boundary created by a model predicting on X.
