@@ -3,11 +3,12 @@
 # Create a confusion matrix
 import itertools
 from sklearn.metrics import confusion_matrix
+import numpy 
 
 def make_confusion_matrix(y_true, y_pred, classes=None, figsize=(10, 10), text_size=15):
   # Create the confusion matrix
   cm = confusion_matrix(y_true, y_pred)
-  cm_norm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis] # normalize our confusion matrix
+  cm_norm = cm.astype("float") / cm.sum(axis=1)[:, numpy.newaxis] # normalize our confusion matrix
   n_classes = cm.shape[0]
 
   # Let's prettify it
@@ -20,14 +21,14 @@ def make_confusion_matrix(y_true, y_pred, classes=None, figsize=(10, 10), text_s
   if classes:
     labels = classes
   else:
-    labels = np.arange(cm.shape[0])
+    labels = numpy.arange(cm.shape[0])
 
   # Label the axes
   ax.set(title="Confusion Matrix",
         xlabel="Predicted Label",
         ylabel="True Label",
-        xticks=np.arange(n_classes),
-        yticks=np.arange(n_classes),
+        xticks=numpy.arange(n_classes),
+        yticks=numpy.arange(n_classes),
         xticklabels=labels, 
         yticklabels=labels)
 
