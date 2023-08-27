@@ -1,4 +1,6 @@
 import random
+import matplotlib.pyplot as plt
+import tensorflow as tf
 
 def plot_random_image(model, images, true_labels, classes):
   """
